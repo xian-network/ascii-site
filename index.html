@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Xian Network</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@200;700&display=swap" rel="stylesheet" />
+		<script src="sketch.js"></script>
+		<style>
+			body {
+				background-color: #000;
+				color: #65dab0;
+				font-weight: 200;
+				font-size: 0.85vw;
+				position: relative;
+				font-family: "JetBrains Mono", monospace;
+			}
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+
+			body {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+				padding: 0;
+			}
+			#moving-bg {
+				width: 100%;
+			}
+			.p5-container {
+				height: 70%;
+				overflow: hidden;
+				font-family: "Consolas", Courier, monospace;
+			}
+			.xian-header {
+				font-size: 1.4rem;
+				margin-bottom: 50px;
+			}
+			.xian-logo {
+				background-color: black;
+				position: absolute;
+				height: 90px;
+				width: 200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				left: 20%;
+				bottom: 30%;
+				font-size: 3.5rem;
+				border: 1px solid #65dab0;
+			}
+			.xian-footer {
+				font-size: 1.4rem;
+				max-width: 1000px;
+				text-align: center;
+				margin-top: 40px;
+				line-height: 2.2rem;
+			}
+			.links {
+				margin-top: 40px;
+				width: 100px;
+				display: flex;
+				align-content: space-between;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="xian-header">Testnet coming Q1 2024</div>
+		<div id="p5-container"></div>
+		<div class="xian-logo">XIAN</div>
+		<div class="xian-footer">
+			XIAN is a <u>scalable</u>, <u>developer-focused</u> blockchain platform empowering users to develop & deploy
+			<u>smart contracts written in Python</u>
+		</div>
+		<div class="links">
+			<a href="https://github.com/XianChain" target="_blank">
+				<img src="icons/icon _github outline_.svg" alt="link to xian github" />
+			</a>
+			<a href="https://t.me/xian_network" target="_blank">
+				<img src="icons/icon _telegram_.svg" alt="link to xian telegram" />
+			</a>
+		</div>
+	</body>
+	<!-- <button onclick="saveJSON(frames, 'frames.json')">Save Frames</button> -->
+</html>
