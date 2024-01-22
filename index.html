@@ -7,26 +7,20 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@200;700&display=swap" rel="stylesheet" />
-		<script src="sketch.js"></script>
+		<!-- <script src="sketch.js"></script> -->
 		<style>
+			html,
 			body {
 				background-color: #000;
 				color: #65dab0;
 				font-weight: 200;
-				font-size: 0.85vw;
 				position: relative;
 				font-family: "JetBrains Mono", monospace;
-			}
-			html,
-			body {
 				margin: 0;
 				padding: 0;
 				height: 100%;
 				width: 100%;
 				overflow: hidden;
-			}
-
-			body {
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
@@ -35,21 +29,28 @@
 				margin: 0;
 				padding: 0;
 			}
+
 			#moving-bg {
 				width: 100%;
+				font-size: 0.7vw;
 			}
-			.p5-container {
+			#moving-bg span {
+				display: inline-block;
+				/* width: 0.5vw; */
+				/* font-family: "Courier New", monospace; */
+			}
+			/* .p5-container {
 				height: 70%;
 				overflow: hidden;
-				font-family: "Consolas", Courier, monospace;
-			}
-			.xian-header {
-				font-size: 1.4rem;
-				margin-bottom: 50px;
+				font-family: "Consolas", "Courier New", monospace;
+			} */
+			.xian-testnet {
+				font-size: 1.2rem;
+				margin: 2rem 0rem;
 			}
 			.xian-logo {
 				background-color: black;
-				position: absolute;
+				/* position: absolute; */
 				height: 90px;
 				width: 200px;
 				display: flex;
@@ -59,31 +60,56 @@
 				bottom: 30%;
 				font-size: 3.5rem;
 				border: 1px solid #65dab0;
+				/* position: static; */
+				justify-self: center;
+				align-self: center;
+				margin: 3rem 2rem 3rem 2rem;
 			}
-			.xian-footer {
-				font-size: 1.4rem;
+			/* .xian-footer {
+				font-size: 1rem;
 				max-width: 1000px;
 				text-align: center;
 				margin-top: 40px;
 				line-height: 2.2rem;
+				padding: 4rem;
+			} */
+			.xian-main {
+				max-width: 600px;
 			}
 			.links {
 				margin-top: 40px;
-				width: 100px;
+				width: 150px;
 				display: flex;
 				align-content: space-between;
 				justify-content: space-between;
 			}
+			a:hover,
+			a:visited {
+				color: #65dab0;
+			}
+			@media screen and (max-width: 600px) {
+				body {
+					align-items: baseline;
+					justify-content: flex-start;
+				}
+				.links {
+					justify-self: center;
+					align-self: center;
+					/* justify-content: flex-end; */
+				}
+				.xian-testnet {
+					justify-self: center;
+					align-self: center;
+				}
+				.xian-main {
+					padding: 1rem 2rem;
+					justify-self: center;
+					align-self: center;
+				}
+			}
 		</style>
 	</head>
 	<body>
-		<div class="xian-header">Testnet coming Q1 2024</div>
-		<div id="p5-container"></div>
-		<div class="xian-logo">XIAN</div>
-		<div class="xian-footer">
-			XIAN is a <u>scalable</u>, <u>developer-centric</u> blockchain platform empowering users to develop & deploy
-			<u>smart contracts written in Python</u>
-		</div>
 		<div class="links">
 			<a href="https://github.com/XianChain" target="_blank">
 				<img src="icons/icon _github outline_.svg" alt="link to xian github" />
@@ -91,7 +117,23 @@
 			<a href="https://t.me/xian_network" target="_blank">
 				<img src="icons/icon _telegram_.svg" alt="link to xian telegram" />
 			</a>
+			<a href="https://discord.gg/desytKYKbz" target="_blank">
+				<img src="icons/icon_discord.svg" alt="link to xian discord" />
+			</a>
 		</div>
+		<div class="xian-logo">XIAN</div>
+		<!-- <div id="p5-container"></div> -->
+		<div class="xian-main">
+			XIAN is a <u>scalable</u>, <u>developer-centric</u> blockchain platform empowering developers to create & deploy
+			<u>smart contracts written in Python</u>.
+
+			<br /><br />
+			This project is in many ways the spiritual successor to <a href="https://github.com/Lamden">Lamden</a>, a project from the 2017
+			ICO era, loved and expected by many which ultimately threw in the towel before delivering on it's vision. <br /><br />
+
+			It is founded and maintained by many of the builders and community from Lamden who fell in love with the ease-of-use and
+			simplicity of Lamden's tooling & smart-contracts.
+		</div>
+		<div class="xian-testnet">Testnet coming Q1 2024</div>
 	</body>
-	<!-- <button onclick="saveJSON(frames, 'frames.json')">Save Frames</button> -->
 </html>
